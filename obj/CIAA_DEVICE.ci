@@ -1,0 +1,18 @@
+edge: { sourcename: "ciaa_device__TTusart_2SCFD"
+  targetname: "-9:uart_lpc43xx__pusart,uart_lpc43xx__pusart"
+  label: "ciaa_device.ads:14:4"
+}
+graph: { title: "D:\Documents\Ada\testing\src\CIAA_DEVICE.adb"
+node: { title: "uart_lpc43xx__pusartIP" label: "pusartip\nD:\Documents\Ada\testing\src\uart_lpc43xx.ads:143:9" shape : ellipse }
+node: { title: "ciaa_device___elabs" label: "CIAA_DEVICE\nD:\Documents\Ada\testing\src\CIAA_DEVICE.ads:9:1\n8 bytes (static)" }
+edge: { sourcename: "ciaa_device___elabs" targetname: "uart_lpc43xx__pusartIP" label: "D:\Documents\Ada\testing\src\CIAA_DEVICE.ads:14:4" }
+node: { title: "ciaa_device__ciaa_leds_clearall" label: "CIAA_LEDS_CLEARALL\nD:\Documents\Ada\testing\src\ciaa_device.adb:201:4\n24 bytes (static)" }
+node: { title: "ciaa_device__ciaa_leds_toggle" label: "CIAA_LEDS_TOGGLE\nD:\Documents\Ada\testing\src\ciaa_device.adb:191:4\n32 bytes (static)" }
+node: { title: "ciaa_device__ciaa_spi_initialize" label: "CIAA_SPI_INITIALIZE\nD:\Documents\Ada\testing\src\ciaa_device.adb:127:4\n4 bytes (static)" }
+node: { title: "ciaa_device__ciaa_usart_initialize" label: "CIAA_USART_INITIALIZE\nD:\Documents\Ada\testing\src\ciaa_device.adb:58:4\n16 bytes (static)" }
+node: { title: "ciaa_device__ciaa_leds_initialize" label: "CIAA_LEDS_INITIALIZE\nD:\Documents\Ada\testing\src\ciaa_device.adb:6:4\n32 bytes (static)" }
+node: { title: "ciaa_device__led_pinIP" label: "LED_PINIP\nD:\Documents\Ada\testing\src\CIAA_DEVICE.ads:16:9\n16 bytes (static)" }
+node: { title: "ciaa_device__TTusart_2SCFD" label: "TTUSART_2SCFD\nD:\Documents\Ada\testing\src\CIAA_DEVICE.ads:14:4\n32 bytes (static)" }
+edge: { sourcename: "ciaa_device__TTusart_2SCFD" targetname: "__indirect_call" label: "D:\Documents\Ada\testing\src\CIAA_DEVICE.ads:14:4" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+}

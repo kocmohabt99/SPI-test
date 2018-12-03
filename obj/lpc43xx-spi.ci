@@ -1,0 +1,19 @@
+graph: { title: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads"
+node: { title: "__gnat_rcheck_CE_Invalid_Data" label: "gnat_rcheck_CE_Invalid_Data\n<built-in>" shape : ellipse }
+node: { title: "lpc43xx__spi__spi_peripheralIP" label: "Spi_Peripheralip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:370:9\n16 bytes (static)" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__int_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:390:7" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__tsr_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:387:7" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__tcr_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:385:7" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__ccr_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:383:7" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__dr_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:380:7" }
+edge: { sourcename: "lpc43xx__spi__spi_peripheralIP" targetname: "lpc43xx__spi__cr_registerIP" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:373:7" }
+node: { title: "lpc43xx__spi__int_registerIP" label: "Int_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:341:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__tsr_registerIP" label: "Tsr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:305:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__tcr_registerIP" label: "Tcr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:280:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__ccr_registerIP" label: "Ccr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:261:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__dr_registerIP" label: "Dr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:232:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__sr_registerIP" label: "Sr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:181:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__cr_registerIP" label: "Cr_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:136:9\n16 bytes (static)" }
+node: { title: "lpc43xx__spi__cr_enum_6RP" label: "Cr_Enum_6rp\nD:\Documents\Ada\testing\src\lpc43xx-spi.ads:101:9\n16 bytes (static)" }
+edge: { sourcename: "lpc43xx__spi__cr_enum_6RP" targetname: "__gnat_rcheck_CE_Invalid_Data" label: "D:\Documents\Ada\testing\src\lpc43xx-spi.ads:101:9" }
+}

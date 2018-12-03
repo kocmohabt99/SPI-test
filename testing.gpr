@@ -1,0 +1,120 @@
+project testing is
+
+   for Target use "arm-eabi";
+   for Main use ("CIAA_FD.adb");
+   for Languages use ("Ada");
+   for Source_Dirs use ("src/**");
+   for Object_Dir use "obj";
+   type Loader_Type is
+      ("RAM", "ROM");
+   Loader : Loader_Type := external ("LOADER", "ROM");
+   type Rts_Type is
+      ("ravenscar-sfp", "ravenscar-full");
+   Rts : Rts_Type := external ("RTS", "ravenscar-sfp");
+   type Build_Type is
+      ("Debug", "Production");
+   Build : Build_Type := external ("PLATFORM_BUILD", "Debug");
+
+   package Compiler is
+
+
+
+
+      case Build is
+
+         when "Debug" =>
+            for Default_Switches ("ada") use ("-g", "-O0", "-gnata", "-fcallgraph-info=su");
+            for Default_Switches ("ada") use Compiler'Default_Switches ("Ada") & ("-g", "-gnatQ", "-ffunction-sections", "-fdata-sections", "-gnatp");
+
+         when "Production" =>
+            for Default_Switches ("ada") use ("-g", "-O3", "-gnatp", "-gnatn");
+            for Default_Switches ("ada") use Compiler'Default_Switches ("Ada") & ("-g", "-gnatQ", "-ffunction-sections", "-fdata-sections", "-gnatp");
+      end case;
+   end Compiler;
+
+   package Builder is
+   end Builder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-Wl,--defsym=__stack_size=16384", "-Wl,--gc-sections", "-Wl,--print-memory-usage");
+   end Linker;
+
+   package Ide is
+      for Connection_Tool use "openocd";
+      for Connection_Config_File use "edu-ciaa-nxp.cfg";
+      for Program_Host use "localhost:3333";
+      for Communication_Protocol use "remote";
+
+      case Build is
+
+         when "Debug" =>
+
+            case Rts is
+
+               when "ravenscar-sfp" =>
+
+                  case Loader is
+
+                     when "RAM" =>
+                        for Debugger_Command use "arm-eabi-gdb";
+                        for Gnatlist use "arm-eabi-gnatls";
+                        for Gnat use "arm-eabi-gnat";
+
+                     when "ROM" =>
+
+                  end case;
+
+               when "ravenscar-full" =>
+
+                  case Loader is
+
+                     when "RAM" =>
+                        for Debugger_Command use "arm-eabi-gdb";
+                        for Gnatlist use "arm-eabi-gnatls";
+                        for Gnat use "arm-eabi-gnat";
+
+                     when "ROM" =>
+
+                  end case;
+            end case;
+
+         when "Production" =>
+            for Debugger_Command use "arm-eabi-gdb";
+            for Gnatlist use "arm-eabi-gnatls";
+            for Gnat use "arm-eabi-gnat";
+      end case;
+   end Ide;
+
+   case Build is
+
+      when "Debug" =>
+
+         case Rts is
+
+            when "ravenscar-sfp" =>
+
+               case Loader is
+
+                  when "RAM" =>
+
+                  when "ROM" =>
+                     for Runtime ("ada") use "ravenscar-full-lpc43";
+               end case;
+
+            when "ravenscar-full" =>
+
+               case Loader is
+
+                  when "RAM" =>
+
+                  when "ROM" =>
+                     for Runtime ("ada") use "ravenscar-sfp-lpc43";
+               end case;
+         end case;
+
+      when "Production" =>
+
+   end case;
+
+end testing;
+

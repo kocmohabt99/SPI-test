@@ -1,0 +1,12 @@
+graph: { title: "D:\Documents\Ada\testing\src\UART_Aux.ads"
+node: { title: "lpc43xx__creg__creg6_registerIP" label: "Creg6_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-creg.ads:904:9" shape : ellipse }
+node: { title: "lpc43xx__cgu__base_spi_clk_registerIP" label: "Base_Spi_Clk_Registerip\nD:\Documents\Ada\testing\src\lpc43xx-cgu.ads:2022:9" shape : ellipse }
+node: { title: "memcmp" label: "builtin_memcmp\n<built-in>" shape : ellipse }
+node: { title: "uart_aux__febaIP" label: "Febaip\nD:\Documents\Ada\testing\src\uart_aux.ads:19:9\n16 bytes (static)" }
+edge: { sourcename: "uart_aux__febaIP" targetname: "lpc43xx__creg__creg6_registerIP" label: "D:\Documents\Ada\testing\src\uart_aux.ads:27:13" }
+edge: { sourcename: "uart_aux__febaIP" targetname: "lpc43xx__cgu__base_spi_clk_registerIP" label: "D:\Documents\Ada\testing\src\uart_aux.ads:25:13" }
+node: { title: "uart_aux__febaEQ" label: "Febaeq\nD:\Documents\Ada\testing\src\uart_aux.ads:19:9\n24 bytes (static)" }
+edge: { sourcename: "uart_aux__febaEQ" targetname: "memcmp" label: "D:\Documents\Ada\testing\src\uart_aux.ads:19:9" }
+node: { title: "uart_aux__uint2_arrayIP" label: "Uint2_Arrayip\nD:\Documents\Ada\testing\src\uart_aux.ads:13:9\n16 bytes (static)" }
+node: { title: "uart_aux__uint4_arrayIP" label: "Uint4_Arrayip\nD:\Documents\Ada\testing\src\uart_aux.ads:9:9\n16 bytes (static)" }
+}

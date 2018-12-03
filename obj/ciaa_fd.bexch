@@ -1,0 +1,29 @@
+[GENERATED OBJECT FILE]
+b__ciaa_fd.o
+[PROJECT FILES]
+D:\Documents\Ada\testing\testing.gpr
+20181126133808
+[BOUND OBJECT FILES]
+D:\Documents\Ada\testing\obj\hal.o
+D:\Documents\Ada\testing\obj\lpc43xx.o
+D:\Documents\Ada\testing\obj\lpc43xx-ccu1.o
+D:\Documents\Ada\testing\obj\lpc43xx-cgu.o
+D:\Documents\Ada\testing\obj\lpc43xx-creg.o
+D:\Documents\Ada\testing\obj\lpc43xx-gpio_port.o
+D:\Documents\Ada\testing\obj\lpc43xx-scu.o
+D:\Documents\Ada\testing\obj\lpc43xx-spi.o
+D:\Documents\Ada\testing\obj\lpc43xx-usart.o
+D:\Documents\Ada\testing\obj\hal-uart.o
+D:\Documents\Ada\testing\obj\last_chance_handler.o
+D:\Documents\Ada\testing\obj\UART_Aux.o
+D:\Documents\Ada\testing\obj\uart_lpc43xx.o
+D:\Documents\Ada\testing\obj\CIAA_DEVICE.o
+D:\Documents\Ada\testing\obj\CIAA_FD.o
+[GENERATED SOURCE FILES]
+b__ciaa_fd.ads
+b__ciaa_fd.adb
+b__ciaa_fd.ali
+[RESULTING OPTIONS]
+-LD:\Documents\Ada\testing\obj\
+-LD:\Documents\Ada\testing\obj\
+-LC:\gnat\2017\arm-eabi\lib\gnat\ravenscar-full-lpc43\adalib\
