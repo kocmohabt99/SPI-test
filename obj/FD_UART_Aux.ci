@@ -1,8 +1,0 @@
-graph: { title: "D:\Documents\Ada\testing\src\FD_UART_Aux.ads"
-node: { title: "memcmp" label: "builtin_memcmp\n<built-in>" shape : ellipse }
-node: { title: "fd_uart_aux__febaIP" label: "Febaip\nD:\Documents\Ada\testing\src\fd_uart_aux.ads:16:9\n16 bytes (static)" }
-node: { title: "fd_uart_aux__febaEQ" label: "Febaeq\nD:\Documents\Ada\testing\src\fd_uart_aux.ads:16:9\n24 bytes (static)" }
-edge: { sourcename: "fd_uart_aux__febaEQ" targetname: "memcmp" label: "D:\Documents\Ada\testing\src\fd_uart_aux.ads:16:9" }
-node: { title: "fd_uart_aux__uint2_arrayIP" label: "Uint2_Arrayip\nD:\Documents\Ada\testing\src\fd_uart_aux.ads:10:9\n16 bytes (static)" }
-node: { title: "fd_uart_aux__uint4_arrayIP" label: "Uint4_Arrayip\nD:\Documents\Ada\testing\src\fd_uart_aux.ads:6:9\n16 bytes (static)" }
-}
