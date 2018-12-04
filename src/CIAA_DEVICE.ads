@@ -1,6 +1,7 @@
 with LPC43xx.GPIO_PORT; use LPC43xx.GPIO_PORT;
 with LPC43xx.USART;     use LPC43xx.USART;
 with LPC43xx.CCU1;      use LPC43xx.CCU1;
+with LPC43xx.CGU;       use LPC43xx.CGU;
 with LPC43xx.SPI;       use LPC43xx.SPI;
 with LPC43xx;           use LPC43xx;
 

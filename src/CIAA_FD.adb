@@ -26,7 +26,7 @@ procedure CIAA_FD is
 begin
    CIAA_LEDS_Initialize;
    CIAA_USART_Initialize (USART_2);
-
+   CIAA_SPI_Initialize;
 
    loop
       CIAA_LEDS_Toggle (LED3_LED);

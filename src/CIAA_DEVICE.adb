@@ -126,23 +126,21 @@ package body CIAA_DEVICE is
 
    procedure CIAA_SPI_Initialize is
    begin
+      CGU_Periph.BASE_SPI_CLK.PD := Output_Stage_Enabled;
+      CGU_Periph.BASE_PERIPH_CLK.PD := Enabled;
+
+      CCU1_Periph.CLK_SPI_CFG.AUTO := Auto_Is_Enabled;
+      CCU1_Periph.CLK_SPI_CFG.WAKEUP := Wake_Up_Is_Enabled;
       CCU1_Periph.CLK_SPI_CFG.RUN := Enabled;
 
-      SPI_Periph.CR.MSTR := Master;
+      --  SPI_Periph.CCR.COUNTER := 240;
 
-      SPI_Periph.CR.BITENABLE := The_Spi_Controller_S;
-      SPI_Periph.CR.BITS := Val_8_Bits_Per_Transfer;
-      SPI_Periph.CR.CPHA := First_Edge;
-      SPI_Periph.CR.CPOL := Sck_Is_Active_High;
-      SPI_Periph.CR.LSBF := Msb;
-
-      SPI_Periph.CCR.COUNTER := 240; --  Rate of 850k
-
-      --  SCLK
+      --  SCLK (P3_3: pag 261)
       --      SCU_MODE_INACT
       --      SCU_MODE_HIGHSPEEDSLEW_EN
       --      SCU_MODE_INBUFF_EN
       --      SCU_MODE_ZIF_DIS
+
       SCU_Periph.SFSP3_3.EPD := Disable_Pull_Down;
       SCU_Periph.SFSP3_3.EPUN := Disable_Pull_Up;
       SCU_Periph.SFSP3_3.EHS := High_Speed_Medium_N;
@@ -150,7 +148,8 @@ package body CIAA_DEVICE is
       SCU_Periph.SFSP3_3.ZIF := Disable_Input_Filter;
       SCU_Periph.SFSP3_3.MODE := Function_1;
 
-      --  MOSI
+
+      --  MOSI (P3_7: pag 262)
       --      SCU_MODE_INACT
       --      SCU_MODE_INBUFF_EN
       --      SCU_MODE_ZIF_DIS
@@ -160,7 +159,7 @@ package body CIAA_DEVICE is
       SCU_Periph.SFSP3_1 (2).ZIF := Disable_Input_Glitch;
       SCU_Periph.SFSP3_1 (2).MODE := Function_1;
 
-      --  MISO
+      --  MISO (P3_6: pag 262)
       --      SCU_MODE_INACT
       --      SCU_MODE_INBUFF_EN
       --      SCU_MODE_ZIF_DIS
@@ -170,13 +169,48 @@ package body CIAA_DEVICE is
       SCU_Periph.SFSP3_1 (3).ZIF := Disable_Input_Glitch;
       SCU_Periph.SFSP3_1 (3).MODE := Function_1;
 
-      --  SSEL
+      --  SSEL (P3_8: pag 263)
       --      SCU_MODE_INACT
       --      SCU_MODE_INBUFF_EN
       --      SCU_MODE_ZIF_DIS
       SCU_Periph.SFSP3_1 (3).EPD := Disable_Pull_Down;
       SCU_Periph.SFSP3_1 (3).EPUN := Disable_Pull_Up;
       SCU_Periph.SFSP3_1 (3).MODE := Function_1;
+
+      SPI_Periph.CR.MSTR := Master;
+
+      SPI_Periph.CR.BITENABLE := The_Spi_Controller_S;
+      SPI_Periph.CR.BITS := Val_8_Bits_Per_Transfer;
+      SPI_Periph.CR.CPHA := First_Edge;
+      SPI_Periph.CR.CPOL := Sck_Is_Active_High;
+      SPI_Periph.CR.LSBF := Msb;
+
+
+
+      SPI_Periph.CCR.COUNTER := 240; --  Rate equal to 850k
+
+
+      if False then
+      SPI_Periph.CR.MSTR := Master;
+
+      SPI_Periph.CR.BITENABLE := The_Spi_Controller_S;
+      SPI_Periph.CR.BITS := Val_8_Bits_Per_Transfer;
+      SPI_Periph.CR.CPHA := First_Edge;
+      SPI_Periph.CR.CPOL := Sck_Is_Active_High;
+      SPI_Periph.CR.LSBF := Msb;
+
+
+
+      SPI_Periph.CCR.COUNTER := 240; --  Rate equal to 850k
+
+
+      --  if False then
+
+      --  end if;
+
+      end if;
+
+      --  CCU1_Periph.CLK_M4_SSP1_CFG.RUN := Enabled;
 
    end CIAA_SPI_Initialize;
 
